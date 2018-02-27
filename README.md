@@ -4,5 +4,9 @@
 
 ### initialize project
 ```
-npm init -y // y for yes for all
+npm init -y // yes for for all
+```
+### install express
+```
+npm install express
 ```
