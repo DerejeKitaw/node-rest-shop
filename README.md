@@ -10,3 +10,8 @@ npm init -y // yes for for all
 ```
 npm install express
 ```
+
+## create server.js
+```
+
+```
