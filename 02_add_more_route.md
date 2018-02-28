@@ -86,4 +86,29 @@ using postman GET http://localhost:3000/products/special
 ```
 ![return](notes/img/GETResponse.png)
 
-
+### Add pathc and delete rout
+```
+router.patch('/:productId', (req, res, next) => {
+    // notice we do not use return here. Because we do not have other code or do not respond two values
+  res.status(200).json({
+    message: 'Updated product',
+  });
+});
+router.delete('/:productId', (req, res, next) => {
+  res.status(200).json({
+    message: 'Deleted Product',
+  });
+});
+```
+run the server
+```
+node server.js
+using postman PATCH http://localhost:3000/products/123  -- return
+{
+    "message": "Updated product"
+}
+using postman DELETE http://localhost:3000/products/123  -- return
+{
+    "message": "Deleted Product"
+}
+```
