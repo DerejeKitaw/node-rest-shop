@@ -82,10 +82,8 @@ using postman GET http://localhost:3000/products/123  -- return
     "message": "You passed an ID"
 }
 
-using postman GET http://localhost:3000/products/special  -- return
-{
-    "message": "You discovered the special ID",
-    "id": "special"
-}
+using postman GET http://localhost:3000/products/special 
 ```
+![return](notes/img/GETResponse.png)
+
 
