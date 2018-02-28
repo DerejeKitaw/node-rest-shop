@@ -2,11 +2,16 @@ const express = require('express');
 // excute express
 const app = express();
 const morgan = require('morgan');
+const bodyParsor = require('body-parser');
 
 const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/orders');
 
 app.use(morgan('dev')); // need to be befor the route
+// parse urlencoded bodies 
+app.use(bodyParsor.urlencoded({extended: false}));
+// parse json
+app.use(bodyParsor.json());
 
 // add middle ware
 app.use('/products', productRoutes);
