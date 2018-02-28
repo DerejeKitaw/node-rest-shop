@@ -1,4 +1,4 @@
-### create api routes for get and post for products
+### create api routes for GET and POST for products
 ```
 const express = require('express');
 const router = express.Router();
@@ -19,7 +19,7 @@ router.post('/', (req, res, next) =>{
 module.exports = router;
 ```
 
-### use /products rout inthe app
+### use /products route in the app
 ```
 const express = require('express');
 // excute express
@@ -57,3 +57,35 @@ using postman PUT http://localhost:3000/products  -- return error
     </body>
 </html>
 ```
+
+### get special products using id
+```
+router.get('/:productId', (req, res, next) => {
+    const id = req.params.productId;
+  if (id === 'special') {
+    res.status(200).json({
+      message: 'You discovered the special ID',
+      id: id
+    });
+  } else {
+    res.status(200).json({
+      message: 'You passed an ID'
+    });
+  }
+});
+```
+run the server
+```
+node server.js
+using postman GET http://localhost:3000/products/123  -- return
+{
+    "message": "You passed an ID"
+}
+
+using postman GET http://localhost:3000/products/special  -- return
+{
+    "message": "You discovered the special ID",
+    "id": "special"
+}
+```
+
