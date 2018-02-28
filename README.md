@@ -58,5 +58,11 @@ server.listen(port);
 ### run the server
 ```
 node server.js
+
+go to http://localhost:3000/  will return: 
+
+{
+    "message": "It works!"
+}
 ```
 
