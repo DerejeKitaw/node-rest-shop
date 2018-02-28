@@ -3,3 +3,8 @@
 npm install --save morgan   --for npm version 5 no need to do save. It will be saved by DEFAULT
 ```
 
+### Tell express to funel all request to morgan
+```
+const morgan = require('morgan');
+
+app.use(morgan('dev')); // need to be the route
