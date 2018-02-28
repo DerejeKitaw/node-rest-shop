@@ -1,0 +1,5 @@
+### Add loging package
+```
+npm install --save morgan   --for npm version 5 no need to do save. It will be saved by DEFAULT
+```
+
