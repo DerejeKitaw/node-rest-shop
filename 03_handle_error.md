@@ -8,6 +8,7 @@ app.use((req, res, next) =>{
 });
 ```
 ![return](notes/img/external_error.png)
+
 this error is because `error.status(404);` is not a function. Should be
 error.status=404;
 ```

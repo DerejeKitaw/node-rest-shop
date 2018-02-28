@@ -13,6 +13,19 @@ app.use(bodyParsor.urlencoded({extended: false}));
 // parse json
 app.use(bodyParsor.json());
 
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*"); // allow all domain but it is not a protection mechanism to protect our API
+    res.header(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+    );
+    if (req.method === 'OPTIONS'){
+        res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET');
+        return res.status(200).json({});
+    }
+    next(); // must have next() for all custome midleware
+});
+
 // add middle ware
 app.use('/products', productRoutes);
 app.use('/orders', orderRoutes);
