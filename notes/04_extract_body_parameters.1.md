@@ -35,5 +35,5 @@ router.post('/', (req, res, next) => {
     });
 });
 ```
-![/products](notes/img/post_product_json.png)
-![/orders](notes/img/post_order_json.png)
+![/products](../notes/img/post_product_json.png)
+![/orders](../notes/img/post_order_json.png)

@@ -84,7 +84,7 @@ using postman GET http://localhost:3000/products/123  -- return
 
 using postman GET http://localhost:3000/products/special 
 ```
-![return](notes/img/GETResponse.png)
+![return](../../notes/img/GETResponse.png)
 
 ### Add pathc and delete rout
 ```
