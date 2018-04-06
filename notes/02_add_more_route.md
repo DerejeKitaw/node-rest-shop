@@ -4,7 +4,7 @@ const express = require('express');
 const router = express.Router();
 
 // router.get('/product') - we do not use products here so this module can be reusable
-// we call products when we use this rout in app.js
+// we call products when we use this route in app.js
 router.get('/', (req, res, next) =>{
     res.status(200).json({
         message: 'Handling GET erquest to /products'
@@ -86,7 +86,7 @@ using postman GET http://localhost:3000/products/special
 ```
 ![return](../../notes/img/GETResponse.png)
 
-### Add pathc and delete rout
+### Add path and delete route
 ```
 router.patch('/:productId', (req, res, next) => {
     // notice we do not use return here. Because we do not have other code or do not respond two values
