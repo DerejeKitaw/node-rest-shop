@@ -15,7 +15,7 @@ npm install express
 ```
 const http = require('http');
 
-// if enviromental variable not set usee 300 as default
+// if enviromental variable not set usee 3000 as default
 const port = process.env.PORT || 3000;
 
 // create server
