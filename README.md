@@ -66,3 +66,4 @@ go to http://localhost:3000/  will return:
 }
 ```
 
+### if cloned first `run npm i`
