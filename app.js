@@ -2,17 +2,17 @@ const express = require('express');
 // excute express
 const app = express();
 const morgan = require('morgan');
-const bodyParsor = require('body-parser');
+const bodyParser = require('body-parser');
 
 const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/orders');
 
-app.use(morgan('dev')); // need to be befor the route
+app.use(morgan('dev')); // need to be before the route
 // parse urlencoded bodies 
-app.use(bodyParsor.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: false}));
 // parse json
-app.use(bodyParsor.json());
-
+app.use(bodyParser.json());
+// allow all domains to access the api
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*"); // allow all domain but it is not a protection mechanism to protect our API
     res.header(
